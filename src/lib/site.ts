@@ -5,13 +5,30 @@
 
 const rawPhone = "+91 636 991 7896";
 
+/**
+ * Always resolves to a valid absolute origin. `new URL()` throws on "" or a
+ * bare domain, which breaks `metadataBase` / sitemap / robots on hosts where
+ * NEXT_PUBLIC_SITE_URL is unset or set to an empty string — so guard it here.
+ */
+function resolveSiteUrl(): string {
+  const fallback = "https://www.cognitotechmedia.com";
+  const raw = (process.env.NEXT_PUBLIC_SITE_URL ?? "").trim();
+  if (!raw) return fallback;
+  const withProtocol = /^https?:\/\//i.test(raw) ? raw : `https://${raw}`;
+  try {
+    return new URL(withProtocol).origin;
+  } catch {
+    return fallback;
+  }
+}
+
 export const site = {
   name: "Cognito Tech Media",
   shortName: "Cognito",
   tagline: "Build. Grow. Create.",
   description:
     "Cognito Tech Media builds fast websites, grows brands with digital marketing, and creates video that converts.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://cognitotechmedia.com",
+  url: resolveSiteUrl(),
 
   phoneDisplay: rawPhone,
   phoneHref: `tel:${rawPhone.replace(/[^\d+]/g, "")}`, // tel:+916369917896
