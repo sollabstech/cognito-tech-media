@@ -89,43 +89,44 @@ export default function ContactPage() {
 
       <section className="section pt-0">
         <div className="shell">
-          <a
-            href={site.mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative flex min-h-[220px] flex-col justify-end overflow-hidden rounded-4xl border border-white/10 bg-ink-raised p-6 sm:min-h-[300px] sm:p-8"
-          >
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 bg-grid-faint [background-size:40px_40px] opacity-50"
+          <Reveal className="overflow-hidden rounded-4xl border border-white/10 bg-ink-raised">
+            <iframe
+              src={site.mapsEmbedUrl}
+              title={`${site.name} location on Google Maps`}
+              className="block h-[320px] w-full border-0 grayscale-[0.35] contrast-[1.05] [color-scheme:light] sm:h-[440px]"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
             />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_30%_20%,rgba(79,91,255,0.25),transparent_70%)]"
-            />
-            <div className="relative flex items-end justify-between gap-4">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 bg-white/[0.02] p-5 sm:p-6">
               <div>
                 <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-300">
                   Find us
                 </span>
-                <p className="mt-2 max-w-sm font-display text-lg font-semibold text-white">
+                <p className="mt-1.5 max-w-sm font-display text-base font-semibold text-white">
                   {site.address.full}
                 </p>
-                <p className="mt-1 text-sm text-white/50">Open in Google Maps for directions</p>
               </div>
-              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-white/15 text-white/70 transition-transform group-hover:translate-x-1 group-hover:text-white">
-                <svg viewBox="0 0 20 20" className="h-5 w-5" fill="none">
+              <a
+                href={site.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-white/75 transition-colors hover:border-brand-500/40 hover:text-white"
+              >
+                Get directions
+                <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none">
                   <path
                     d="M4 10h11M11 5l5 5-5 5"
                     stroke="currentColor"
                     strokeWidth="1.75"
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    className="transition-transform group-hover:translate-x-0.5"
                   />
                 </svg>
-              </span>
+              </a>
             </div>
-          </a>
+          </Reveal>
         </div>
       </section>
     </>

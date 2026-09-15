@@ -2,35 +2,17 @@ import Link from "next/link";
 import { cn } from "@/lib/cn";
 import { site } from "@/lib/site";
 
-/** The Cognito mark: an electric-blue ring broken at the lower-left by an orange play triangle. */
+/** The Cognito brand mark — the real logo from /public/logo.png. */
 export function LogoMark({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 48 48"
-      className={cn("h-9 w-9", className)}
-      role="img"
-      aria-label={`${site.name} logo`}
-    >
-      <defs>
-        <linearGradient id="ctm-ring" x1="6" y1="6" x2="42" y2="44" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor="#7b86ff" />
-          <stop offset="0.55" stopColor="#4f5bff" />
-          <stop offset="1" stopColor="#1f2bc9" />
-        </linearGradient>
-        <linearGradient id="ctm-tri" x1="10" y1="27" x2="22" y2="41" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor="#ff8a3d" />
-          <stop offset="1" stopColor="#f04e06" />
-        </linearGradient>
-      </defs>
-      <path
-        d="M6.83 29.4 A 18 18 0 1 1 18.58 41.17"
-        fill="none"
-        stroke="url(#ctm-ring)"
-        strokeWidth="7.5"
-        strokeLinecap="round"
-      />
-      <path d="M19.6 27.3 L9.7 31.8 L15.1 41.2 Z" fill="url(#ctm-tri)" />
-    </svg>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/logo.png"
+      alt={`${site.name} logo`}
+      width={500}
+      height={500}
+      className={cn("h-9 w-9 object-contain", className)}
+    />
   );
 }
 

@@ -68,12 +68,81 @@ export const packageDeliverables = [
   "Paid Advertising Growth",
 ] as const;
 
-/** Named projects shown on the live site's portfolio. */
-export const projects = [
-  { title: "Vasantham", category: "Graphic Designs" },
-  { title: "Nut Lovers", category: "Graphic Designs" },
-  { title: "Dehydrit Fruits", category: "Graphic Designs" },
-] as const;
-
-/** Public portfolio PDF hosted on the live site. */
-export const portfolioPdfUrl = "https://www.cognitotechmedia.com/portfolio.pdf";
+/**
+ * The landing-page "featured reel".
+ *
+ * `account` numbers below are the REAL Instagram profile stats
+ * (instagram.com/cognito_tech_media). The per-reel numbers (`views`, `likes`,
+ * `comments`, `shares`, `watchingNow`) are still ⚠️ PLACEHOLDER — set them to a
+ * real reel's figures, and point `videoSrc` at that reel exported as .mp4
+ * (Instagram's own embed can't muted-autoplay). To be driven by the admin panel.
+ */
+export const featuredReel = {
+  videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4", // TODO: real reel .mp4
+  posterSrc: "", // optional still image shown before the video loads
+  caption: "Behind the scenes on a recent brand film shoot.",
+  music: "Original audio · Cognito Tech Media",
+  // per-reel engagement — ⚠️ PLACEHOLDER
+  views: 1_240_000,
+  likes: 84_200,
+  comments: 1_940,
+  shares: 3_100,
+  watchingNow: 1_204,
+  // Three Instagram ACCOUNTS + their top reel, shown in the section.
+  // ⚠️ PLACEHOLDER — swap for real client handles, follower counts, reel .mp4s,
+  // real view counts and the real profile URLs. To be driven by the admin panel.
+  reels: [
+    {
+      videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+      poster: "",
+      name: "Maya Skincare",
+      handle: "maya.skincare",
+      verified: true,
+      followers: 128_000,
+      views: 2_410_000,
+      label: "Launch campaign reel",
+      url: "https://www.instagram.com/cognito_tech_media",
+    },
+    {
+      videoSrc: "https://www.w3schools.com/html/movie.mp4",
+      poster: "",
+      name: "IronPeak Fitness",
+      handle: "ironpeak.fitness",
+      verified: true,
+      followers: 74_500,
+      views: 1_240_000,
+      label: "90-day transformation",
+      url: "https://www.instagram.com/cognito_tech_media",
+    },
+    {
+      videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+      poster: "",
+      name: "Saffron Kitchen",
+      handle: "saffron.kitchen",
+      verified: false,
+      followers: 45_200,
+      views: 892_000,
+      label: "Signature dish teaser",
+      url: "https://www.instagram.com/cognito_tech_media",
+    },
+  ],
+  // real profile stats
+  account: {
+    name: "Cognito Tech Media | Digital Marketing",
+    handle: "cognito_tech_media",
+    verified: true,
+    posts: 101,
+    followers: 13_200,
+    following: 39,
+    url: "https://www.instagram.com/cognito_tech_media",
+  },
+  // ambient "live activity" ticker — generic, not claiming specific events
+  activity: [
+    "@ravi.designs liked this",
+    "@meraj.travels commented “🔥🔥”",
+    "shared to a story",
+    "@linga.sweets started following",
+    "@apple.supermarket liked this",
+    "saved by 42 people",
+  ],
+} as const;

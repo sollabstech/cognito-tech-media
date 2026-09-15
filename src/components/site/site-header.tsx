@@ -38,7 +38,7 @@ export function SiteHeader() {
       className={cn(
         "sticky top-0 z-50 transition-[background-color,backdrop-filter,border-color] duration-300",
         scrolled
-          ? "border-b border-white/10 bg-ink/80 backdrop-blur-xl"
+          ? "glass-strong border-b border-white/10"
           : "border-b border-transparent bg-transparent",
       )}
     >
@@ -94,7 +94,7 @@ export function SiteHeader() {
                       transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
                       className="absolute left-1/2 top-full z-50 w-[720px] -translate-x-1/2 pt-3"
                     >
-                      <div className="card-surface grid grid-cols-3 gap-2 rounded-3xl bg-ink-raised/95 p-3 shadow-glow">
+                      <div className="glass grid grid-cols-3 gap-2 rounded-3xl p-3 shadow-glow">
                         {servicesNav.map((group) => (
                           <div key={group.href} className="rounded-2xl p-3">
                             <Link

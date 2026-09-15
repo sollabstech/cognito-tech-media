@@ -7,6 +7,7 @@ import { cn } from "@/lib/cn";
 import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
 import { MobileActionBar } from "@/components/site/mobile-action-bar";
+import { MeshBackground } from "@/components/site/mesh-background";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -59,10 +60,7 @@ export default function RootLayout({
         />
 
         {/* Fixed decorative backdrop — sits behind everything, never scrolls */}
-        <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
-          <div className="absolute inset-0 bg-brand-radial opacity-70" />
-          <div className="absolute inset-0 bg-grid-faint [background-size:64px_64px] [mask-image:radial-gradient(circle_at_50%_0%,#000,transparent_70%)]" />
-        </div>
+        <MeshBackground />
 
         <a
           href="#main"

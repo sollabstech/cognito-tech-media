@@ -3,7 +3,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 
 export function TechStack({ groups }: { groups: readonly TechGroup[] }) {
   return (
-    <section className="section border-y border-white/5 bg-ink-soft/40">
+    <section className="section section-muted">
       <div className="shell">
         <Reveal className="mb-8 flex flex-col gap-3">
           <span className="eyebrow">

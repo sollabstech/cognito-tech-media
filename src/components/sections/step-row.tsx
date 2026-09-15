@@ -17,7 +17,7 @@ export function StepRow({
   muted?: boolean;
 }) {
   return (
-    <section className={cn("section", muted && "border-y border-white/5 bg-ink-soft/40")}>
+    <section className={cn("section", muted && "section-muted")}>
       <div className="shell">
         {(eyebrow || heading) && (
           <Reveal className="mb-10 flex flex-col gap-3">

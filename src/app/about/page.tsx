@@ -53,7 +53,7 @@ export default function AboutPage() {
       </section>
 
       {/* vision + mission */}
-      <section className="section border-y border-white/5 bg-ink-soft/40">
+      <section className="section section-muted">
         <div className="shell grid gap-6 lg:grid-cols-2 lg:gap-8">
           {[
             {

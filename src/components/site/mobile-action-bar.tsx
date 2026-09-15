@@ -15,7 +15,7 @@ export function MobileActionBar() {
       initial={reduce ? false : { y: 80 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-      className="pb-safe fixed inset-x-0 bottom-0 z-30 border-t border-white/10 bg-ink/90 backdrop-blur-lg lg:hidden"
+      className="glass-strong pb-safe fixed inset-x-0 bottom-0 z-30 border-t border-white/10 lg:hidden"
     >
       <div className="grid grid-cols-3">
         <a

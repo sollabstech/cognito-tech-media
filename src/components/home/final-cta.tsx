@@ -7,7 +7,7 @@ export function FinalCta() {
     <section className="section">
       <div className="shell">
         <Reveal>
-          <div className="relative overflow-hidden rounded-4xl border border-white/10 bg-gradient-to-br from-brand-700/40 via-ink-raised to-ink px-6 py-14 text-center sm:px-12 sm:py-20">
+          <div className="relative overflow-hidden rounded-4xl glass border border-white/10 bg-gradient-to-br from-brand-700/35 via-brand-950/20 to-transparent px-6 py-14 text-center sm:px-12 sm:py-20">
             <div
               aria-hidden
               className="pointer-events-none absolute inset-0 bg-grid-faint [background-size:40px_40px] [mask-image:radial-gradient(circle_at_50%_50%,#000,transparent_75%)]"

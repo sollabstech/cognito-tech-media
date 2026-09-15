@@ -1,6 +1,7 @@
 import { Hero } from "@/components/home/hero";
 import { BrandPillars } from "@/components/home/brand-pillars";
 import { ServicesOverview } from "@/components/home/services-overview";
+import { FeaturedReel } from "@/components/home/featured-reel";
 import { Process } from "@/components/home/process";
 import { Industries } from "@/components/home/industries";
 import { PackagePreview } from "@/components/home/package-preview";
@@ -14,6 +15,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <FeaturedReel />
       <BrandPillars />
       <ServicesOverview />
       <Process />

@@ -20,7 +20,7 @@ const variants: Record<Variant, string> = {
   accent:
     "bg-gradient-to-br from-accent-400 to-accent-600 text-white shadow-[0_18px_40px_-16px_rgba(255,106,26,0.7)] hover:shadow-[0_22px_60px_-14px_rgba(255,106,26,0.85)] hover:-translate-y-0.5",
   secondary:
-    "border border-white/15 bg-white/[0.04] text-white hover:border-white/30 hover:bg-white/[0.08] hover:-translate-y-0.5",
+    "border border-white/15 bg-white/[0.06] text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.12)] hover:border-white/30 hover:bg-white/[0.1] hover:-translate-y-0.5",
   ghost: "text-white/80 hover:text-white hover:bg-white/[0.06]",
 };
 

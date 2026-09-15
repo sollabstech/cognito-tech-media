@@ -40,7 +40,7 @@ export function MobileNav({
           animate={{ opacity: 1, x: 0 }}
           exit={reduce ? { opacity: 0 } : { opacity: 0, x: "100%" }}
           transition={{ duration: 0.36, ease: EASE }}
-          className="fixed inset-x-0 bottom-0 top-16 z-40 overflow-y-auto overscroll-contain bg-ink lg:hidden"
+          className="glass-strong fixed inset-x-0 bottom-0 top-16 z-40 overflow-y-auto overscroll-contain lg:hidden"
         >
           <motion.nav
             initial="hidden"

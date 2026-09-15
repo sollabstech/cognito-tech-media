@@ -21,7 +21,7 @@ export function FaqAccordion({
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className={cn("section", muted && "border-y border-white/5 bg-ink-soft/40")}>
+    <section className={cn("section", muted && "section-muted")}>
       <div className="shell">
         <Reveal className="mb-8 flex flex-col gap-3">
           <span className="eyebrow">

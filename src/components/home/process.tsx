@@ -4,7 +4,7 @@ import { Reveal } from "@/components/motion/reveal";
 
 export function Process() {
   return (
-    <section className="section relative border-y border-white/5 bg-ink-soft/40">
+    <section className="section relative section-muted">
       <div className="shell">
         <SectionHeading
           eyebrow="Workflow"

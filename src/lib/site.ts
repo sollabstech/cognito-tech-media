@@ -45,8 +45,9 @@ export const site = {
     country: "IN",
     full: "4-3-21, Railar Nagar, 3rd Street, Madurai, Tamil Nadu, 625018",
   },
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=4-3-21%2C%20Railar%20Nagar%2C%203rd%20Street%2C%20Madurai%2C%20Tamil%20Nadu%2C%20625018",
+  mapsUrl: "https://maps.google.com/?cid=14660570438966993066",
+  mapsEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.6115390994841!2d78.10040017607503!3d9.951869537014385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cf4d7f2f2911%3A0xcb75023c549222aa!2sCognito%20Tech%20Media!5e0!3m2!1sen!2sin!4v1788766019906!5m2!1sen!2sin",
   hours: "Mon–Sat, 10:00 AM – 7:00 PM IST",
 
   // Google Business Profile / Maps share link (used for review CTAs)
